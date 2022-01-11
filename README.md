@@ -1,2 +1,2 @@
 # minicurso
-Minicurso do Catalisa - Consumindo API do Rick and Morty
+Minicurso do Catalisa 2022 - Consumindo API do Rick and Morty
