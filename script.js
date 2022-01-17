@@ -9,6 +9,7 @@ gerarValorAleatorio = () => {
 }
 
 pegarPersonagem = () => {
+    let estado;
     let numeroAleatorio = gerarValorAleatorio();
     return fetch(`https://rickandmortyapi.com/api/character/${numeroAleatorio}`, {
         method:'GET',
@@ -21,7 +22,16 @@ pegarPersonagem = () => {
         imagem.alt = data.name;
         nomeDoPersonagem.innerHTML = data.name;
         especie.innerHTML = data.species;
-        condicao.innerHTML = data.status;
+
+        //('Alive', 'Dead' or 'unknown')
+        if(data.status === 'Alive')
+            estado = 'Vivo';
+        else if(data.status == 'Dead')
+            estado = 'Morto';
+        else
+            estado = 'Desconhecido';
+
+        condicao.innerHTML = estado;
     });
 }
 
