@@ -47,9 +47,10 @@ main > section > button {
 
 #detalhes-container > li {
     align-items: baseline;
+    font-size: 28px;
     display: flex;
 }
 
 #detalhes-container > li p {
-    color: white;
+    color: black;
 }
